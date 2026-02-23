@@ -273,7 +273,7 @@
         <h2 class="text-[10px] font-bold tracking-[0.6em] text-[var(--accent-orange)] mb-24 uppercase">Featured Projects</h2>
 
         <div class="space-y-32">
-            <!-- Project1: Left Image -->
+            <!-- Project 1: Left Image -->
             <div class="experience-item">
                 <div class="project-img-wrapper" onclick="showProject('project1')">
                     <img src="https://i.postimg.cc/sXHr0p0p/AI_Researcher_image.jpg" alt="Parametric Design Project">
@@ -290,7 +290,7 @@
                 </div>
             </div>
 
-            <!-- Project2: Right Image (swap order) -->
+            <!-- Project 2: Right Image (swap order) -->
             <div class="experience-item">
                 <div class="project-img-wrapper" onclick="showProject('project2')">
                     <img src="https://i.postimg.cc/Qt978sNS/Architect-Portfolio-2025.jpg" style="transform: scale(1.05); transform-origin: center; width: 100%; height: auto;"alt="LLANDAFF GALLERY">
@@ -307,7 +307,7 @@
                 </div>
             </div>
 
-            <!-- Project3: Left Image -->
+            <!-- Project 3: Left Image -->
             <div class="experience-item">
                 <div class="project-img-wrapper" onclick="showProject('project3')">
                     <img src="https://i.postimg.cc/j50fSmDQ/CFD-lines-da-da-Base.png" style="transform: scale(1.3); transform-origin: center; width: 100%; height: auto;" alt="Passive Design - High Rise Residence">
@@ -324,9 +324,9 @@
                 </div>
             </div>
 
-              <!-- Project4: Right Image (swap order) -->
+              <!-- Project 4: Right Image (swap order) -->
             <div class="experience-item">
-                <div class="project-img-wrapper" onclick="showProject('project4')">
+                <div class="project-img-wrapper" onclick="showProject('project2')">
                     <img src="https://i.postimg.cc/26PyjZ3n/Community-Center-Castelfranco-Rendering-01.jpg" style="transform: scale(1); transform-origin: center; width: 100%; height: auto;"alt="Community Center: 
 Into Castelfranco Town">
                     <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 hover:opacity-100 transition">
@@ -351,7 +351,7 @@ Into Castelfranco Town</h3>
         
         
         <div class="experience-item">
-            <div class="project-img-wrapper" onclick="showProject('SWP')">
+            <div class="project-img-wrapper" onclick="showProject('swp')">
                 <img src="https://i.postimg.cc/rwn44gmy/Gemini-Generated-Image-urz1xeurz1xeurz1.png" alt="SWP">
             </div>
             <div class="timeline-container">
@@ -360,8 +360,7 @@ Into Castelfranco Town</h3>
                 <span class="text-[var(--text-gray)] font-mono text-[10px] font-bold tracking-widest uppercase">2025/06 - Present</span>
                 <span class="text-zinc-600 font-mono text-[10px] tracking-widest uppercase">Architect Assistant</span>
                 <h3 class="text-2xl font-bold mt-2">SWP</h3>
-                <p class="text-gray-400 text-sm mt-4 leading-relaxed">伦敦工作室: 负责沙特城市规划改造项目和比利时公共建筑项目的 Rhino 建模与参数化模拟。结合Honeybee/Ladybug CFD模拟, 完成沙特城市规划的微气候分析与光热优化。提升建筑群的通风效率和能源效能。
-                同时负责AI建筑工作流研究，利用ComfyUI搭建更高效的AI效果图生成系统；建立不同国家建筑法规知识库，优化RAG向量化层级切片，提高建筑法规审核效率。</p>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">伦敦工作室: 负责沙特城市规划改造项目和比利时公共建筑项目的 Rhino 建模与参数化模拟。结合Honeybee/Ladybug CFD模拟，完成沙特城市规划的微气候分析与光热优化。提升建筑群的通风效率和能源效能。</p>
             </div>
         </div>
         <div class="experience-item">
@@ -403,7 +402,7 @@ Into Castelfranco Town</h3>
         <div class="max-w-5xl mx-auto">
             <div class="flex justify-between items-start mb-8">
                 <div>
-                    <div class="ai-badge">✨ Detailed Information</div>
+                    <div class="ai-badge">✨ AI Enhanced Analysis</div>
                     <h2 id="modal-title" class="text-4xl font-extrabold italic mb-2 tracking-tighter">Project Detail</h2>
                     <p id="modal-meta" class="text-zinc-500 text-xs tracking-widest uppercase"></p>
                 </div>
@@ -415,7 +414,8 @@ Into Castelfranco Town</h3>
                     <div class="bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800">
                         <h4 class="text-xs font-bold text-white mb-4 tracking-widest uppercase">Overview</h4>
                         <p id="modal-desc" class="text-zinc-400 text-sm leading-relaxed mb-6"></p>
-                        
+                        <button id="ai-insight-btn" class="w-full py-4 bg-white text-black text-[10px] font-bold rounded-xl hover:bg-[var(--accent-orange)] hover:text-white transition flex items-center justify-center gap-2">
+                             ✨ 点击获取 AI 深度点评
                         </button>
                         <div id="ai-insight-result" class="mt-4 text-xs text-zinc-500 italic hidden border-t border-zinc-800 pt-4 leading-relaxed"></div>
                     </div>
@@ -452,8 +452,8 @@ Into Castelfranco Town</h3>
             canvas.height = 500;
             const bgImage = new Image();
             bgImage.crossOrigin = "anonymous";
-            bgImage.src = "https://i.postimg.cc/XvwjfjpT/lun-dun-tai-wu-shi-he.avif";
-              function createParticles(imgData) {
+            bgImage.src = "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop";
+            function createParticles(imgData) {
                 const tempCanvas = document.createElement('canvas');
                 const tempCtx = tempCanvas.getContext('2d');
                 const sW = 200; const sH = 100;
@@ -492,33 +492,36 @@ Into Castelfranco Town</h3>
             });
             requestAnimationFrame(animate);
         }
+        // --- 2. Gemini API 核心集成 ---
+        async function callGemini(prompt, systemPrompt = "") {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const payload = { contents: [{ parts: [{ text: prompt }] }], systemInstruction: { parts: [{ text: systemPrompt }] } };
+            for (let i = 0; i < 5; i++) {
+                try {
+                    const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                    const d = await r.json();
+                    return d.candidates?.[0]?.content?.parts?.[0]?.text || "No response";
+                } catch (e) { await new Promise(r => setTimeout(r, Math.pow(2, i) * 1000)); }
+            }
+            return "Connection error.";
+        }
         // --- 3. 详情弹窗与数据 ---
-        const projectData = { 
-            'project1': { title: 'AI Research & Development', meta: 'AI Agent Workflow System', desc: '研究并开发AI工作流系统，提升行业运行效率。', images: ['https://i.postimg.cc/7ZmPdzQ3/coze_客服系统.png'] },
-            'project2': { title: 'Llandaff Gallery', meta: 'Sustainable Parametric Design', desc: '运用参数化设计和CFD参数化模拟优化的可持续场馆设计。', images: ['https://i.postimg.cc/G2sDxRx6/Architect-Portfolio-202527.jpg',
-            'https://i.postimg.cc/7Y4z0pGS/Architect-Portfolio-202526.jpg',
-            'https://i.postimg.cc/P538GJ6p/Architect-Portfolio-20255.jpg',
-            'https://i.postimg.cc/SQ62SDTq/dui-bi03.png',
-            'https://i.postimg.cc/6pk46gXp/0021.png'] },
-            'project3': { title: 'Environmental Passive Design', meta: 'CFD/GH/LB Simulation & Optimization', desc: '结合Honeybee/Ladybug CFD模拟与Enscape渲染的环境分析方案。', images: ['https://i.postimg.cc/RZjpMs80/Architect-Portfolio-202512.jpg',
-            'https://i.postimg.cc/9FkJpgc9/Architect-Portfolio-202513.jpg',
-            'https://i.postimg.cc/wMvQ5LPQ/Architect-Portfolio-202514.jpg',
-            'https://i.postimg.cc/8c6jVCrG/Centre-Point-House-Section-ju-bu-jian-tou002.png',
-            'https://i.postimg.cc/CMzP9nmk/1m-Public-Plaza-wind001.png',
-            'https://i.postimg.cc/P5kSL3Tt/Architect-Portfolio-202515.jpg'] },
-            'project4': { title: 'Community Center in Castelfranco', meta: 'Sustainable Community Design', desc: '基于对当地居民的调研，设计流线型可持续社区中心，提供活动室，Cafe，求职中心以解决小镇居民诉求，提升居民参与度与城镇凝聚力。', images: ['https://i.postimg.cc/26PyjZ3n/Community-Center-Castelfranco-Rendering-01.jpg',
-            'https://i.postimg.cc/9f3drrhy/Architect-Portfolio-202518.jpg',
-            'https://i.postimg.cc/rF0RxMgg/Architect-Portfolio-202517.jpg',
-            'https://i.postimg.cc/MGDnqTK7/Architect-Portfolio-202519.jpg',
-            'https://i.postimg.cc/rsds1NGx/Architect-Portfolio-202520.jpg',
-            'https://i.postimg.cc/fT9kk5T2/Architect-Portfolio-202521.jpg'] },
-            'SWP': { title: 'SWP Works', meta: 'London Practice', desc: '参与沙特城市规划改造项目和比利时公共建筑项目的Rhino建模与参数化模拟。开展AI建筑工作流研究，搭建更高效的AI效果图生成系统；建立不同国家建筑法规知识库，优化RAG向量化层级切片，提高建筑法规审核效率。', images: ['https://i.postimg.cc/sXzwzgTq/SWP.png'] },
-            'BAID': { title: 'BAID Works', meta: 'Beijing Practice', desc: '参与中国多地养老院，大型文旅中心，医院设计。', images: ['https://i.postimg.cc/L4y1YDdg/Architect-Portfolio-20258.jpg'] },
+        const projectData = {
+            'project1': { title: 'Parametric Urban Framework', meta: 'Award-winning Project 2024', desc: '基于生成式设计的可持续城市改造方案。融合Grasshopper参数化逻辑与AI优化算法。', images: ['https://i.postimg.cc/sXHr0p0p/AI_Researcher_image.jpg', 'https://images.pexels.com/photos/3721547/pexels-photo-3721547.jpeg?auto=compress&cs=tinysrgb&w=1200'] },
+            'project2': { title: 'LLANDAFF GALLERY', meta: '2025 Award-winning Project', desc: '结合Honeybee参数化热环境模拟和CFD算法，模拟室内最佳日照效果；多轮测算屋顶流线型设计，优化美术馆室内微气候，室外风环境与内部自然通风设计。', images: ['https://i.postimg.cc/Qt978sNS/Architect-Portfolio-2025.jpg', 'https://images.pexels.com/photos/1114690/pexels-photo-1114690.jpeg?auto=compress&cs=tinysrgb&w=1200', 'https://images.pexels.com/photos/3175150/pexels-photo-3175150.jpeg?auto=compress&cs=tinysrgb&w=1200'] },
+            'project3': { title: 'Passive Design - High Rise Residence', meta: 'Simulation & Optimization 2024/4 - 2024/9', desc: '基于社区用户实地调研采访，结合Honeybee热环境模拟和CFD算法，通过可持续设计和外立面改造，解决高层住宅冬冷夏热问题，优化高层住宅的自然通风与热舒适设计。', images: ['https://i.postimg.cc/j50fSmDQ/CFD-lines-da-da-Base.png', 'https://images.pexels.com/photos/3175150/pexels-photo-3175150.jpeg?auto=compress&cs=tinysrgb&w=1200', 'https://images.pexels.com/photos/3721547/pexels-photo-3721547.jpeg?auto=compress&cs=tinysrgb&w=1200'] },
+            'project4': { title: 'Community Center: Into Castelfranco Town', meta: '2022/3 - 2022/7', desc: '基于对当地居民的调研，设计流线型可持续社区中心，提供活动室，Cafe，求职中心以解决小镇居民诉求，提升居民参与度与城镇凝聚力。', images: ['https://i.postimg.cc/26PyjZ3n/Community-Center-Castelfranco-Rendering-01.jpg'] },
+            'SWP': { title: 'Studio Woodroffe Papa Works', meta: 'London Practice | 2025/06 - Present', desc: '伦敦工作室: 负责沙特城市规划改造项目和比利时公共建筑项目的 Rhino 建模与参数化模拟。结合Honeybee/Ladybug CFD模拟，完成沙特城市规划的微气候分析与光热优化。提升建筑群的通风效率和能源效能。', images: ['https://i.postimg.cc/rwn44gmy/Gemini-Generated-Image-urz1xeurz1xeurz1.png'] },
+            'BAID': { title: 'BAID - Beijing Architects', meta: 'Architecture Practice | 2022/10 - 2023/03', desc: '北京建筑事务所Part 1 Architect Assistant: 协助主创设计师完成大型文旅项目,国际医院,泰康养老项目的Rhino 3D建模,Enscape渲染,PS绘图,外立面优化等方案深化工作。', images: ['https://i.postimg.cc/sxkBFvcW/BAID.png'] }
         };
         let currentProjectId = null;
         function showProject(id) {
             currentProjectId = id;
             const d = projectData[id];
+            if (!d) {
+                console.error('Project not found:', id, 'Available:', Object.keys(projectData));
+                return;
+            }
             document.getElementById('modal-title').innerText = d.title;
             document.getElementById('modal-meta').innerText = d.meta;
             document.getElementById('modal-desc').innerText = d.desc;
@@ -533,7 +536,7 @@ Into Castelfranco Town</h3>
             res.classList.remove('hidden');
             const insight = await callGemini(`分析项目：${projectData[currentProjectId].title}`, "你是一位资深AI产品经理, 请提供专业点评。");
             res.innerText = insight;
-        }
+        };
         // --- 4. 聊天功能 ---
         const chatWin = document.getElementById('ai-chat-window');
         const chatMsgs = document.getElementById('chat-messages');
